@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <img src="/Vargas Assets/Logo2.png" alt="Vargas Handyman Logo" className="h-48 rounded-full bg-transparent object-cover ml-0 mt-0 mb-0" />
+            <img src="./Vargas Assets/Logo2.png" alt="Vargas Handyman Logo" className="h-48 rounded-full bg-transparent object-cover ml-0 mt-0 mb-0" />
           </div>
           
           <div className="hidden md:flex items-center space-x-8">

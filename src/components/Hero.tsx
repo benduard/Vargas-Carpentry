@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url("https://images.pexels.com/photos/3637786/pexels-photo-3637786.jpeg?auto=compress&cs=tinysrgb&w=1600")',
+          backgroundImage: 'url("/Vargas Assets/Image26.jpg")',
         }}
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
@@ -17,38 +17,24 @@ const Hero: React.FC = () => {
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4">
-            Expert Handyman & Custom Carpentry Services in Houston
-          </h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Expert Carpentry & Handyman Services in Houston</h1>
           
-          <p className="text-xl text-white opacity-90 mb-8">
-            From TV Mounting to Custom Woodwork – Quality Workmanship You Can Trust
+          <p className="text-xl text-white mb-8">
+            We are a professional Carpentry and Handyman service with over 26 years of experience in Residential and Commercial work — delivering fast, reliable, high-quality service at fair prices in the Houston Greater Area.
           </p>
           
-          <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-            <a 
-              href="#contact" 
-              className="bg-red-600 hover:bg-red-700 text-white text-lg font-medium px-8 py-3 rounded-md inline-flex items-center justify-center transition-colors"
-            >
+          <div className="flex flex-col sm:flex-row gap-4">
+            <a href="#contact" className="bg-red-600 text-white text-lg font-medium px-8 py-3 rounded-md inline-flex items-center justify-center hover:bg-red-700 transition-colors">
               Request a Free Estimate
-              <ArrowRight size={18} className="ml-2" />
             </a>
-            
-            <a 
-              href="tel:+1234567890" 
-              className="bg-white bg-opacity-20 hover:bg-opacity-30 backdrop-blur-sm text-white text-lg font-medium px-8 py-3 rounded-md inline-flex items-center justify-center transition-all"
-            >
-              Call (123) 456-7890
+            <a href="tel:+8323711183" className="bg-white bg-opacity-20 hover:bg-opacity-30 backdrop-blur-sm text-white text-lg font-medium px-8 py-3 rounded-md inline-flex items-center justify-center transition-all">
+              Call or Text: (832) 371-1183
             </a>
           </div>
           
-          <div className="mt-8 text-white flex items-center">
-            <div className="flex -space-x-2 mr-3">
-              <img className="h-8 w-8 rounded-full border-2 border-white" src="https://images.pexels.com/photos/3760822/pexels-photo-3760822.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Customer" />
-              <img className="h-8 w-8 rounded-full border-2 border-white" src="https://images.pexels.com/photos/4989593/pexels-photo-4989593.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Customer" />
-              <img className="h-8 w-8 rounded-full border-2 border-white" src="https://images.pexels.com/photos/3777570/pexels-photo-3777570.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Customer" />
-            </div>
-            <span className="text-sm">Trusted by 200+ happy customers in Houston</span>
+          <div className="mt-6 flex flex-col sm:flex-row items-center gap-4">
+            <span className="text-white text-sm">✅ Trusted by 200+ Happy Clients Across Houston</span>
+            <span className="text-white text-sm">🕒 Same-day & Next-day Service Available</span>
           </div>
         </div>
       </div>

@@ -4,6 +4,7 @@ import { X } from 'lucide-react';
 
 const Gallery: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [showAll, setShowAll] = useState(false);
 
   const openLightbox = (imageUrl: string) => {
     setSelectedImage(imageUrl);
@@ -11,6 +12,10 @@ const Gallery: React.FC = () => {
 
   const closeLightbox = () => {
     setSelectedImage(null);
+  };
+
+  const toggleShowAll = () => {
+    setShowAll(!showAll);
   };
 
   return (
@@ -24,26 +29,125 @@ const Gallery: React.FC = () => {
         </div>
         
         {/* Gallery Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {galleryItems.map((item) => (
-            <div 
-              key={item.id}
-              className="group relative cursor-pointer overflow-hidden rounded-lg shadow-md"
-              onClick={() => openLightbox(item.imageUrl)}
-            >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <img 
+            src="/Vargas Assets/Cover1.jpg" 
+            alt="Cover 1" 
+            className="w-full h-64 object-cover rounded-lg shadow-md cursor-pointer" 
+            onClick={() => openLightbox('/Vargas Assets/Cover1.jpg')} 
+          />
+          <img 
+            src="/Vargas Assets/Cover2.1.jpg" 
+            alt="Cover 2" 
+            className="w-full h-64 object-cover rounded-lg shadow-md cursor-pointer" 
+            onClick={() => openLightbox('/Vargas Assets/Cover2.1.jpg')} 
+          />
+          <img 
+            src="/Vargas Assets/Cover3.jpg" 
+            alt="Cover 3" 
+            className="w-full h-64 object-cover rounded-lg shadow-md cursor-pointer" 
+            onClick={() => openLightbox('/Vargas Assets/Cover3.jpg')} 
+          />
+          <img 
+            src="/Vargas Assets/Cover4.jpg" 
+            alt="Cover 4" 
+            className="w-full h-64 object-cover rounded-lg shadow-md cursor-pointer" 
+            onClick={() => openLightbox('/Vargas Assets/Cover4.jpg')} 
+          />
+          <img 
+            src="/Vargas Assets/Cover5.jpg" 
+            alt="Cover 5" 
+            className="w-full h-64 object-cover rounded-lg shadow-md cursor-pointer" 
+            onClick={() => openLightbox('/Vargas Assets/Cover5.jpg')} 
+          />
+          <img 
+            src="/Vargas Assets/Cover6.jpg" 
+            alt="Cover 6" 
+            className="w-full h-64 object-cover rounded-lg shadow-md cursor-pointer" 
+            onClick={() => openLightbox('/Vargas Assets/Cover6.jpg')} 
+          />
+          <img 
+            src="/Vargas Assets/Cover7.jpg" 
+            alt="Cover 7" 
+            className="w-full h-64 object-cover rounded-lg shadow-md cursor-pointer" 
+            onClick={() => openLightbox('/Vargas Assets/Cover7.jpg')} 
+          />
+          <img 
+            src="/Vargas Assets/Cover8.jpg" 
+            alt="Cover 8" 
+            className="w-full h-64 object-cover rounded-lg shadow-md cursor-pointer" 
+            onClick={() => openLightbox('/Vargas Assets/Cover8.jpg')} 
+          />
+          <img 
+            src="/Vargas Assets/Cover9.jpg" 
+            alt="Cover 9" 
+            className="w-full h-64 object-cover rounded-lg shadow-md cursor-pointer" 
+            onClick={() => openLightbox('/Vargas Assets/Cover9.jpg')} 
+          />
+          {showAll && (
+            <>
               <img 
-                src={item.imageUrl} 
-                alt={item.title} 
-                className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                src="/Vargas Assets/Cover10.jpg" 
+                alt="Cover 10" 
+                className="w-full h-64 object-cover rounded-lg shadow-md cursor-pointer" 
+                onClick={() => openLightbox('/Vargas Assets/Cover10.jpg')} 
               />
-              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-end">
-                <div className="p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                  <h3 className="text-white font-bold text-xl">{item.title}</h3>
-                  <p className="text-white text-sm opacity-90">{item.description}</p>
-                </div>
-              </div>
-            </div>
-          ))}
+              <img 
+                src="/Vargas Assets/Cover11.jpg" 
+                alt="Cover 11" 
+                className="w-full h-64 object-cover rounded-lg shadow-md cursor-pointer" 
+                onClick={() => openLightbox('/Vargas Assets/Cover11.jpg')} 
+              />
+              <img 
+                src="/Vargas Assets/Cover12.jpg" 
+                alt="Cover 12" 
+                className="w-full h-64 object-cover rounded-lg shadow-md cursor-pointer" 
+                onClick={() => openLightbox('/Vargas Assets/Cover12.jpg')} 
+              />
+              <img 
+                src="/Vargas Assets/Cover13.jpg" 
+                alt="Cover 13" 
+                className="w-full h-64 object-cover rounded-lg shadow-md cursor-pointer" 
+                onClick={() => openLightbox('/Vargas Assets/Cover13.jpg')} 
+              />
+              <img 
+                src="/Vargas Assets/Cover14.jpg" 
+                alt="Cover 14" 
+                className="w-full h-64 object-cover rounded-lg shadow-md cursor-pointer" 
+                onClick={() => openLightbox('/Vargas Assets/Cover14.jpg')} 
+              />
+              <img 
+                src="/Vargas Assets/Cover15.jpg" 
+                alt="Cover 15" 
+                className="w-full h-64 object-cover rounded-lg shadow-md cursor-pointer" 
+                onClick={() => openLightbox('/Vargas Assets/Cover15.jpg')} 
+              />
+              <img 
+                src="/Vargas Assets/Cover17.jpg" 
+                alt="Cover 17" 
+                className="w-full h-64 object-cover rounded-lg shadow-md cursor-pointer" 
+                onClick={() => openLightbox('/Vargas Assets/Cover17.jpg')} 
+              />
+              <img 
+                src="/Vargas Assets/Cover18.jpg" 
+                alt="Cover 18" 
+                className="w-full h-64 object-cover rounded-lg shadow-md cursor-pointer" 
+                onClick={() => openLightbox('/Vargas Assets/Cover18.jpg')} 
+              />
+              <img 
+                src="/Vargas Assets/Cover19.jpg" 
+                alt="Cover 19" 
+                className="w-full h-64 object-cover rounded-lg shadow-md cursor-pointer" 
+                onClick={() => openLightbox('/Vargas Assets/Cover19.jpg')} 
+              />
+            </>
+          )}
+        </div>
+        
+        <div className="text-center mt-8">
+          <button onClick={toggleShowAll} className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition-colors">
+            {showAll ? 'Show Less' : 'Show More'}
+          </button>
         </div>
         
         {/* Lightbox */}

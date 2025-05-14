@@ -156,7 +156,7 @@ const Contact: React.FC = () => {
                   <Phone size={24} className="text-red-500 mr-4 flex-shrink-0" />
                   <div>
                     <p className="font-medium mb-1">Phone</p>
-                    <a href="tel:+1234567890" className="text-xl text-white hover:text-red-500 transition-colors">(123) 456-7890</a>
+                    <a href="tel:+8323711183" className="text-xl text-white hover:text-red-500 transition-colors">(832) 371-1183</a>
                   </div>
                 </div>
                 
@@ -164,7 +164,7 @@ const Contact: React.FC = () => {
                   <Mail size={24} className="text-red-500 mr-4 flex-shrink-0" />
                   <div>
                     <p className="font-medium mb-1">Email</p>
-                    <a href="mailto:info@vargashandyman.com" className="text-white hover:text-red-500 transition-colors">info@vargashandyman.com</a>
+                    <a href="mailto:info@vargas-carpentry.com" className="text-white hover:text-red-500 transition-colors">info@vargas-carpentry.com</a>
                   </div>
                 </div>
                 
@@ -172,7 +172,7 @@ const Contact: React.FC = () => {
                   <MapPin size={24} className="text-red-500 mr-4 flex-shrink-0" />
                   <div>
                     <p className="font-medium mb-1">Service Area</p>
-                    <p>Los Angeles County and surrounding areas</p>
+                    <p>Houston and surrounding areas</p>
                   </div>
                 </div>
               </div>

@@ -20,6 +20,11 @@ export default {
           800: '#9B2C2C',
           900: '#742A2A',
         },
+        primary: {
+          DEFAULT: '#4682B4', // Steel blue
+          dark: '#3A6A94',
+          light: '#5A92C4',
+        },
       },
     },
   },

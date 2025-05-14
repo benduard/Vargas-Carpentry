@@ -29,7 +29,7 @@ const FloatingCTA: React.FC = () => {
     >
       <div className="flex space-x-3">
         <a 
-          href="tel:+1234567890" 
+          href="tel:+8323711183" 
           className="bg-red-600 text-white flex items-center justify-center px-5 py-3 rounded-full shadow-lg hover:bg-red-700 transition-colors"
         >
           <Phone size={20} className="mr-2" />

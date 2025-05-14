@@ -8,8 +8,8 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Information */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Vargas Handyman & Custom Carpentry</h3>
-            <p className="mb-4">Professional handyman and carpentry services you can trust. Licensed, insured, and committed to quality workmanship.</p>
+            <h3 className="text-xl font-bold mb-4">Carpentry & Handyman Services</h3>
+            <p className="mb-4">Professional handyman and carpentry services you can trust, committed to quality workmanship.</p>
             <div className="flex space-x-4 mt-4">
               <a href="#" className="text-white hover:text-red-500 transition-colors">
                 <Facebook size={20} />
@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
               <a href="#" className="text-white hover:text-red-500 transition-colors">
                 <Instagram size={20} />
               </a>
-              <a href="mailto:info@vargashandyman.com" className="text-white hover:text-red-500 transition-colors">
+              <a href="mailto:info@vargas-carpentry.com" className="text-white hover:text-red-500 transition-colors">
                 <Mail size={20} />
               </a>
             </div>
@@ -29,15 +29,15 @@ const Footer: React.FC = () => {
             <div className="space-y-3">
               <div className="flex items-start">
                 <Phone size={18} className="mt-1 mr-3 flex-shrink-0" />
-                <span>(123) 456-7890</span>
+                <span>(832) 371-1183</span>
               </div>
               <div className="flex items-start">
                 <Mail size={18} className="mt-1 mr-3 flex-shrink-0" />
-                <span>info@vargashandyman.com</span>
+                <span>info@vargas-carpentry.com</span>
               </div>
               <div className="flex items-start">
                 <MapPin size={18} className="mt-1 mr-3 flex-shrink-0" />
-                <span>Serving Los Angeles County and surrounding areas</span>
+                <span>Serving Houston and surrounding areas</span>
               </div>
               <div className="flex items-start">
                 <Clock size={18} className="mt-1 mr-3 flex-shrink-0" />
@@ -61,8 +61,7 @@ const Footer: React.FC = () => {
               <li><a href="#contact" className="hover:text-red-500 transition-colors">Contact</a></li>
             </ul>
             <div className="mt-6">
-              <p className="text-sm text-gray-400">Licensed & Insured</p>
-              <p className="text-sm text-gray-400">CA License #123456</p>
+              {/* Removed CA License information */}
             </div>
           </div>
         </div>

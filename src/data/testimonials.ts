@@ -4,7 +4,7 @@ export const testimonials: TestimonialType[] = [
   {
     id: '1',
     name: 'Sarah Johnson',
-    location: 'Los Angeles, CA',
+    location: 'Houston, TX',
     text: 'Vargas Handyman installed our kitchen cabinets and they look amazing! On time, professional, and cleaned up perfectly after the job.',
     rating: 5
   },

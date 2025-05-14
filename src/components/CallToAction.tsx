@@ -18,10 +18,10 @@ const CallToAction: React.FC = () => {
             <ArrowRight size={18} className="ml-2" />
           </a>
           <a 
-            href="tel:+1234567890" 
+            href="tel:+8323711183" 
             className="border-2 border-white text-white hover:bg-white hover:text-red-600 font-medium px-8 py-3 rounded-md inline-flex items-center justify-center transition-colors"
           >
-            Call (123) 456-7890
+            Call (832) 371-1183
           </a>
         </div>
       </div>

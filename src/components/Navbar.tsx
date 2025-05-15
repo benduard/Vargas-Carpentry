@@ -33,16 +33,20 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <img src="./Vargas Assets/Logo2.png" alt="Vargas Handyman Logo" className="h-48 rounded-full bg-transparent object-cover ml-0 mt-0 mb-0" />
+            <img 
+              src="./Vargas Assets/Logo2.png" 
+              alt="Vargas Handyman Logo" 
+              className="h-16 sm:h-20 md:h-24 lg:h-32 rounded-full bg-transparent object-cover ml-0 mt-2 mb-2" 
+            />
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
             <nav className="flex items-center space-x-6">
-              <a href="#" className={`${isScrolled ? 'text-gray-800' : 'text-white'} hover:text-red-600 transition-colors font-medium text-xl`}>Home</a>
-              <a href="#services" className={`${isScrolled ? 'text-gray-800' : 'text-white'} hover:text-red-600 transition-colors font-medium text-xl`}>Services</a>
-              <a href="#about" className={`${isScrolled ? 'text-gray-800' : 'text-white'} hover:text-red-600 transition-colors font-medium text-xl`}>About</a>
-              <a href="#gallery" className={`${isScrolled ? 'text-gray-800' : 'text-white'} hover:text-red-600 transition-colors font-medium text-xl`}>Gallery</a>
-              <a href="#contact" className={`${isScrolled ? 'text-gray-800' : 'text-white'} hover:text-red-600 transition-colors font-medium text-xl`}>Contact</a>
+              <a href="#" className={`${isScrolled ? 'text-gray-800' : 'text-white'} hover:text-red-600 transition-colors font-medium text-lg md:text-xl`}>Home</a>
+              <a href="#services" className={`${isScrolled ? 'text-gray-800' : 'text-white'} hover:text-red-600 transition-colors font-medium text-lg md:text-xl`}>Services</a>
+              <a href="#about" className={`${isScrolled ? 'text-gray-800' : 'text-white'} hover:text-red-600 transition-colors font-medium text-lg md:text-xl`}>About</a>
+              <a href="#gallery" className={`${isScrolled ? 'text-gray-800' : 'text-white'} hover:text-red-600 transition-colors font-medium text-lg md:text-xl`}>Gallery</a>
+              <a href="#contact" className={`${isScrolled ? 'text-gray-800' : 'text-white'} hover:text-red-600 transition-colors font-medium text-lg md:text-xl`}>Contact</a>
             </nav>
             
             <a href="tel:+8323711183" className="flex items-center bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition-colors">

@@ -5,11 +5,11 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Information */}
           <div>
             <h3 className="text-xl font-bold mb-4">Carpentry & Handyman Services</h3>
-            <p className="mb-4">Professional handyman and carpentry services you can trust, committed to quality workmanship.</p>
+            <p className="mb-4 text-sm md:text-base">Professional handyman and carpentry services you can trust, committed to quality workmanship.</p>
             <div className="flex space-x-4 mt-4">
               <a href="#" className="text-white hover:text-red-500 transition-colors">
                 <Facebook size={20} />
@@ -23,10 +23,22 @@ const Footer: React.FC = () => {
             </div>
           </div>
           
-          {/* Contact Information */}
+          {/* Quick Links */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Contact Us</h3>
-            <div className="space-y-3">
+            <h3 className="text-lg font-bold mb-4">Quick Links</h3>
+            <ul className="space-y-2 text-sm md:text-base">
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Home</a></li>
+              <li><a href="#services" className="text-gray-400 hover:text-white transition-colors">Services</a></li>
+              <li><a href="#about" className="text-gray-400 hover:text-white transition-colors">About</a></li>
+              <li><a href="#gallery" className="text-gray-400 hover:text-white transition-colors">Gallery</a></li>
+              <li><a href="#contact" className="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+            </ul>
+          </div>
+          
+          {/* Contact Info */}
+          <div>
+            <h3 className="text-lg font-bold mb-4">Contact Us</h3>
+            <div className="space-y-3 text-sm md:text-base">
               <div className="flex items-start">
                 <Phone size={18} className="mt-1 mr-3 flex-shrink-0" />
                 <span>(832) 371-1183</span>
@@ -37,32 +49,21 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex items-start">
                 <MapPin size={18} className="mt-1 mr-3 flex-shrink-0" />
-                <span>Serving Houston and surrounding areas</span>
-              </div>
-              <div className="flex items-start">
-                <Clock size={18} className="mt-1 mr-3 flex-shrink-0" />
-                <div>
-                  <p>Monday-Friday: 8am-6pm</p>
-                  <p>Saturday: 9am-4pm</p>
-                  <p>Sunday: Closed</p>
-                </div>
+                <span>Houston and surrounding areas</span>
               </div>
             </div>
           </div>
           
-          {/* Quick Links */}
+          {/* Service Areas */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="hover:text-red-500 transition-colors">Home</a></li>
-              <li><a href="#services" className="hover:text-red-500 transition-colors">Services</a></li>
-              <li><a href="#about" className="hover:text-red-500 transition-colors">About Us</a></li>
-              <li><a href="#gallery" className="hover:text-red-500 transition-colors">Gallery</a></li>
-              <li><a href="#contact" className="hover:text-red-500 transition-colors">Contact</a></li>
+            <h3 className="text-lg font-bold mb-4">Service Areas</h3>
+            <ul className="space-y-2 text-sm md:text-base">
+              <li className="text-gray-400">Houston</li>
+              <li className="text-gray-400">Katy</li>
+              <li className="text-gray-400">Sugar Land</li>
+              <li className="text-gray-400">The Woodlands</li>
+              <li className="text-gray-400">And surrounding areas</li>
             </ul>
-            <div className="mt-6">
-              {/* Removed CA License information */}
-            </div>
           </div>
         </div>
         

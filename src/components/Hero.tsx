@@ -17,18 +17,20 @@ const Hero: React.FC = () => {
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Expert Carpentry & Handyman Services in Houston</h1>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+            Expert Carpentry & Handyman Services in Houston
+          </h1>
           
-          <p className="text-xl text-white mb-8">
+          <p className="text-lg md:text-xl text-white mb-6 md:mb-8">
             We are a professional Carpentry and Handyman service with over 26 years of experience in Residential and Commercial work — delivering fast, reliable, high-quality service at fair prices in the Houston Greater Area.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4">
-            <a href="#contact" className="bg-red-600 text-white text-lg font-medium px-8 py-3 rounded-md inline-flex items-center justify-center hover:bg-red-700 transition-colors">
-              Request a Free Estimate
+            <a href="#contact" className="bg-red-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-red-700 transition-colors text-center">
+              Get a Free Quote
             </a>
-            <a href="tel:+8323711183" className="bg-white bg-opacity-20 hover:bg-opacity-30 backdrop-blur-sm text-white text-lg font-medium px-8 py-3 rounded-md inline-flex items-center justify-center transition-all">
-              Call or Text: (832) 371-1183
+            <a href="#services" className="bg-white text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors text-center">
+              Our Services
             </a>
           </div>
           

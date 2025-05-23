@@ -34,7 +34,7 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center">
           <div className="flex items-center">
             <img 
-              src="./Vargas Assets/Logo2.png" 
+              src="/images/Logo2.png" 
               alt="Vargas Handyman Logo" 
               className="h-16 sm:h-20 md:h-24 lg:h-32 rounded-full bg-transparent object-cover ml-0 mt-2 mb-2" 
             />

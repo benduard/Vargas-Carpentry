@@ -31,6 +31,27 @@ const Gallery: React.FC = () => {
         {/* Gallery Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           <img 
+            src="/images/Chandalier1.jpeg" 
+            alt="Chandelier Installation 1" 
+            className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
+            onClick={() => openLightbox('/images/Chandalier1.jpeg')} 
+            loading="lazy"
+          />
+          <img 
+            src="/images/Chandalier3.jpeg" 
+            alt="Chandelier Installation 2" 
+            className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
+            onClick={() => openLightbox('/images/Chandalier3.jpeg')} 
+            loading="lazy"
+          />
+          <img 
+            src="/images/Chandalier4.jpeg" 
+            alt="Chandelier Installation 3" 
+            className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
+            onClick={() => openLightbox('/images/Chandalier4.jpeg')} 
+            loading="lazy"
+          />
+          <img 
             src="/images/Cover1.jpg" 
             alt="Cover 1" 
             className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
@@ -72,29 +93,29 @@ const Gallery: React.FC = () => {
             onClick={() => openLightbox('/images/Cover6.jpg')} 
             loading="lazy"
           />
-          <img 
-            src="/images/Cover7.jpg" 
-            alt="Cover 7" 
-            className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
-            onClick={() => openLightbox('/images/Cover7.jpg')} 
-            loading="lazy"
-          />
-          <img 
-            src="/images/Cover8.jpg" 
-            alt="Cover 8" 
-            className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
-            onClick={() => openLightbox('/images/Cover8.jpg')} 
-            loading="lazy"
-          />
-          <img 
-            src="/images/Cover9.jpg" 
-            alt="Cover 9" 
-            className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
-            onClick={() => openLightbox('/images/Cover9.jpg')} 
-            loading="lazy"
-          />
           {showAll && (
             <>
+              <img 
+                src="/images/Cover7.jpg" 
+                alt="Cover 7" 
+                className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
+                onClick={() => openLightbox('/images/Cover7.jpg')} 
+                loading="lazy"
+              />
+              <img 
+                src="/images/Cover8.jpg" 
+                alt="Cover 8" 
+                className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
+                onClick={() => openLightbox('/images/Cover8.jpg')} 
+                loading="lazy"
+              />
+              <img 
+                src="/images/Cover9.jpg" 
+                alt="Cover 9" 
+                className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
+                onClick={() => openLightbox('/images/Cover9.jpg')} 
+                loading="lazy"
+              />
               <img 
                 src="/images/Cover10.jpg" 
                 alt="Cover 10" 
@@ -156,13 +177,6 @@ const Gallery: React.FC = () => {
                 alt="Cover 19" 
                 className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
                 onClick={() => openLightbox('/images/Cover19.jpg')} 
-                loading="lazy"
-              />
-              <img 
-                src="/images/Image26.jpg" 
-                alt="Image 26" 
-                className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
-                onClick={() => openLightbox('/images/Image26.jpg')} 
                 loading="lazy"
               />
             </>

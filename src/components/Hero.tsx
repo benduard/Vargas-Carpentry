@@ -1,42 +1,43 @@
 import React from 'react';
-import { Phone, Mail } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
-    <section 
-      className="relative h-screen flex items-center justify-center text-white"
-      style={{
-        backgroundImage: 'url("Vargas Assets/HeroCover4x.jpeg")',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
-    >
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+    <section className="relative h-screen min-h-[600px] flex items-center">
+      {/* Background Image with Overlay */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: 'url("/Vargas Assets/Image26.jpg")',
+        }}
+      >
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+      </div>
       
       {/* Content */}
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-        <h1 className="text-4xl md:text-6xl font-bold mb-6">
-          Professional Handyman & Carpentry Services
-        </h1>
-        <p className="text-xl md:text-2xl mb-8">
-          Need help now? I'm Ruben, a professional handyman and carpenter with over 26 years of experience in residential and commercial work — delivering fast, reliable, high-quality service at fair prices.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a 
-            href="tel:+17135555555" 
-            className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg text-lg font-semibold flex items-center justify-center gap-2 transition-colors"
-          >
-            <Phone size={20} />
-            (713) 555-5555
-          </a>
-          <a 
-            href="mailto:info@vargascarpentry.com" 
-            className="bg-white hover:bg-gray-100 text-gray-900 px-8 py-3 rounded-lg text-lg font-semibold flex items-center justify-center gap-2 transition-colors"
-          >
-            <Mail size={20} />
-            info@vargascarpentry.com
-          </a>
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="max-w-3xl">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+            Expert Carpentry & Handyman Services in Houston
+          </h1>
+          
+          <p className="text-lg md:text-xl text-white mb-6 md:mb-8">
+            We are a professional Carpentry and Handyman service with over 26 years of experience in Residential and Commercial work — delivering fast, reliable, high-quality service at fair prices in the Houston Greater Area.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4">
+            <a href="#contact" className="bg-red-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-red-700 transition-colors text-center">
+              Get a Free Quote
+            </a>
+            <a href="#services" className="bg-white text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors text-center">
+              Our Services
+            </a>
+          </div>
+          
+          <div className="mt-6 flex flex-col sm:flex-row items-center gap-4">
+            <span className="text-white text-sm">✅ Trusted by 200+ Happy Clients Across Houston</span>
+            <span className="text-white text-sm">🕒 Same-day & Next-day Service Available</span>
+          </div>
         </div>
       </div>
     </section>

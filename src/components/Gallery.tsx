@@ -31,120 +31,139 @@ const Gallery: React.FC = () => {
         {/* Gallery Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           <img 
-            src="./Vargas Assets/Cover1.jpg" 
+            src="/images/Cover1.jpg" 
             alt="Cover 1" 
-            className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer" 
-            onClick={() => openLightbox('./Vargas Assets/Cover1.jpg')} 
+            className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
+            onClick={() => openLightbox('/images/Cover1.jpg')} 
+            loading="lazy"
           />
           <img 
-            src="./Vargas Assets/Cover2.1.jpg" 
+            src="/images/Cover2.1.jpg" 
             alt="Cover 2" 
-            className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer" 
-            onClick={() => openLightbox('./Vargas Assets/Cover2.1.jpg')} 
+            className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
+            onClick={() => openLightbox('/images/Cover2.1.jpg')} 
+            loading="lazy"
           />
           <img 
-            src="./Vargas Assets/Cover3.jpg" 
+            src="/images/Cover3.jpg" 
             alt="Cover 3" 
-            className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer" 
-            onClick={() => openLightbox('./Vargas Assets/Cover3.jpg')} 
+            className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
+            onClick={() => openLightbox('/images/Cover3.jpg')} 
+            loading="lazy"
           />
           <img 
-            src="./Vargas Assets/Cover4.jpg" 
+            src="/images/Cover4.jpg" 
             alt="Cover 4" 
-            className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer" 
-            onClick={() => openLightbox('./Vargas Assets/Cover4.jpg')} 
+            className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
+            onClick={() => openLightbox('/images/Cover4.jpg')} 
+            loading="lazy"
           />
           <img 
-            src="./Vargas Assets/Cover5.jpg" 
+            src="/images/Cover5.jpg" 
             alt="Cover 5" 
-            className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer" 
-            onClick={() => openLightbox('./Vargas Assets/Cover5.jpg')} 
+            className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
+            onClick={() => openLightbox('/images/Cover5.jpg')} 
+            loading="lazy"
           />
           <img 
-            src="./Vargas Assets/Cover6.jpg" 
+            src="/images/Cover6.jpg" 
             alt="Cover 6" 
-            className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer" 
-            onClick={() => openLightbox('./Vargas Assets/Cover6.jpg')} 
+            className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
+            onClick={() => openLightbox('/images/Cover6.jpg')} 
+            loading="lazy"
           />
           <img 
-            src="./Vargas Assets/Cover7.jpg" 
+            src="/images/Cover7.jpg" 
             alt="Cover 7" 
-            className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer" 
-            onClick={() => openLightbox('./Vargas Assets/Cover7.jpg')} 
+            className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
+            onClick={() => openLightbox('/images/Cover7.jpg')} 
+            loading="lazy"
           />
           <img 
-            src="./Vargas Assets/Cover8.jpg" 
+            src="/images/Cover8.jpg" 
             alt="Cover 8" 
-            className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer" 
-            onClick={() => openLightbox('./Vargas Assets/Cover8.jpg')} 
+            className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
+            onClick={() => openLightbox('/images/Cover8.jpg')} 
+            loading="lazy"
           />
           <img 
-            src="./Vargas Assets/Cover9.jpg" 
+            src="/images/Cover9.jpg" 
             alt="Cover 9" 
-            className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer" 
-            onClick={() => openLightbox('./Vargas Assets/Cover9.jpg')} 
+            className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
+            onClick={() => openLightbox('/images/Cover9.jpg')} 
+            loading="lazy"
           />
           {showAll && (
             <>
               <img 
-                src="./Vargas Assets/Cover10.jpg" 
+                src="/images/Cover10.jpg" 
                 alt="Cover 10" 
-                className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer" 
-                onClick={() => openLightbox('./Vargas Assets/Cover10.jpg')} 
+                className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
+                onClick={() => openLightbox('/images/Cover10.jpg')} 
+                loading="lazy"
               />
               <img 
-                src="./Vargas Assets/Cover11.jpg" 
+                src="/images/Cover11.jpg" 
                 alt="Cover 11" 
-                className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer" 
-                onClick={() => openLightbox('./Vargas Assets/Cover11.jpg')} 
+                className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
+                onClick={() => openLightbox('/images/Cover11.jpg')} 
+                loading="lazy"
               />
               <img 
-                src="./Vargas Assets/Cover12.jpg" 
+                src="/images/Cover12.jpg" 
                 alt="Cover 12" 
-                className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer" 
-                onClick={() => openLightbox('./Vargas Assets/Cover12.jpg')} 
+                className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
+                onClick={() => openLightbox('/images/Cover12.jpg')} 
+                loading="lazy"
               />
               <img 
-                src="./Vargas Assets/Cover13.jpg" 
+                src="/images/Cover13.jpg" 
                 alt="Cover 13" 
-                className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer" 
-                onClick={() => openLightbox('./Vargas Assets/Cover13.jpg')} 
+                className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
+                onClick={() => openLightbox('/images/Cover13.jpg')} 
+                loading="lazy"
               />
               <img 
-                src="./Vargas Assets/Cover14.jpg" 
+                src="/images/Cover14.jpg" 
                 alt="Cover 14" 
-                className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer" 
-                onClick={() => openLightbox('./Vargas Assets/Cover14.jpg')} 
+                className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
+                onClick={() => openLightbox('/images/Cover14.jpg')} 
+                loading="lazy"
               />
               <img 
-                src="./Vargas Assets/Cover15.jpg" 
+                src="/images/Cover15.jpg" 
                 alt="Cover 15" 
-                className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer" 
-                onClick={() => openLightbox('./Vargas Assets/Cover15.jpg')} 
+                className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
+                onClick={() => openLightbox('/images/Cover15.jpg')} 
+                loading="lazy"
               />
               <img 
-                src="./Vargas Assets/Cover17.jpg" 
+                src="/images/Cover17.jpg" 
                 alt="Cover 17" 
-                className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer" 
-                onClick={() => openLightbox('./Vargas Assets/Cover17.jpg')} 
+                className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
+                onClick={() => openLightbox('/images/Cover17.jpg')} 
+                loading="lazy"
               />
               <img 
-                src="./Vargas Assets/Cover18.jpg" 
+                src="/images/Cover18.jpg" 
                 alt="Cover 18" 
-                className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer" 
-                onClick={() => openLightbox('./Vargas Assets/Cover18.jpg')} 
+                className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
+                onClick={() => openLightbox('/images/Cover18.jpg')} 
+                loading="lazy"
               />
               <img 
-                src="./Vargas Assets/Cover19.jpg" 
+                src="/images/Cover19.jpg" 
                 alt="Cover 19" 
-                className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer" 
-                onClick={() => openLightbox('./Vargas Assets/Cover19.jpg')} 
+                className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
+                onClick={() => openLightbox('/images/Cover19.jpg')} 
+                loading="lazy"
               />
               <img 
-                src="./Vargas Assets/Image26.jpg" 
+                src="/images/Image26.jpg" 
                 alt="Image 26" 
-                className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer" 
-                onClick={() => openLightbox('./Vargas Assets/Image26.jpg')} 
+                className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
+                onClick={() => openLightbox('/images/Image26.jpg')} 
+                loading="lazy"
               />
             </>
           )}

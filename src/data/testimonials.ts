@@ -1,25 +1,48 @@
-import { TestimonialType } from '../types';
+export type TestimonialType = {
+  text: string;
+  author: string;
+  location: string;
+};
 
 export const testimonials: TestimonialType[] = [
   {
-    id: '1',
-    name: 'Sarah Johnson',
-    location: 'Houston, TX',
-    text: 'Vargas Handyman installed our kitchen cabinets and they look amazing! On time, professional, and cleaned up perfectly after the job.',
-    rating: 5
+    text: 'Vargas Handyman installed our kitchen cabinets and they look amazing! On time, professional, and cleaned up after the job.',
+    author: 'Sarah Johnson',
+    location: 'Houston, TX'
   },
   {
-    id: '2',
-    name: 'Michael Rodriguez',
-    location: 'Pasadena, CA',
-    text: 'I needed multiple TVs mounted throughout my home. They were efficient, careful, and made sure everything was perfect before leaving.',
-    rating: 5
+    text: 'I needed TVs mounted throughout my home. The team made sure every mount was clean and secure. Great service!',
+    author: 'Michael Rodriguez',
+    location: 'Houston, TX'
   },
   {
-    id: '3',
-    name: 'Jennifer Williams',
-    location: 'Glendale, CA',
-    text: 'The custom built-ins they created for my office are exactly what I wanted. Great attention to detail and quality craftsmanship.',
-    rating: 5
+    text: 'The custom woodwork Vargas did for my store counter was top-notch. Highly recommend!',
+    author: 'Jennifer Williams',
+    location: 'Houston, TX'
+  },
+  {
+    text: 'They completely transformed our backyard with a beautiful custom deck. The attention to detail was impressive.',
+    author: 'David Thompson',
+    location: 'Katy, TX'
+  },
+  {
+    text: 'Professional, punctual, and perfect work on our bathroom remodel. Couldn\'t be happier with the results!',
+    author: 'Lisa Chen',
+    location: 'Sugar Land, TX'
+  },
+  {
+    text: 'The team handled our office renovation with expertise. Everything was completed on time and within budget.',
+    author: 'Robert Martinez',
+    location: 'Houston, TX'
+  },
+  {
+    text: 'Outstanding work on our custom kitchen island. The craftsmanship is exceptional!',
+    author: 'Emily Parker',
+    location: 'The Woodlands, TX'
+  },
+  {
+    text: 'They fixed our damaged drywall and painted the entire house. The quality of work was outstanding.',
+    author: 'James Wilson',
+    location: 'Houston, TX'
   }
 ];

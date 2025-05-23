@@ -34,7 +34,7 @@ module.exports = {
         container: "1280px",
       },
       animation: {
-        marquee: 'marquee 60s linear infinite',
+        marquee: 'marquee 15s linear infinite',
       },
       keyframes: {
         marquee: {

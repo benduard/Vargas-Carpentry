@@ -1,5 +1,4 @@
 import { cn } from "../../lib/utils"
-import { Avatar, AvatarImage } from "./avatar"
 
 export interface TestimonialAuthor {
   name: string
@@ -27,25 +26,21 @@ export function TestimonialCard({
       {...(href ? { href } : {})}
       className={cn(
         "flex flex-col bg-white rounded-lg shadow-lg",
-        "p-6 border border-gray-100",
+        "p-4 sm:p-6 border border-gray-100",
         "hover:shadow-xl transition-shadow duration-300",
+        "touch-manipulation",
         className
       )}
     >
-      <div className="flex items-center gap-4 mb-4">
-        <Avatar className="h-12 w-12">
-          <AvatarImage src={author.avatar} alt={author.name} />
-        </Avatar>
-        <div>
-          <h3 className="font-semibold text-gray-900">
-            {author.name}
-          </h3>
-          <p className="text-sm text-gray-500">
-            {author.handle}
-          </p>
-        </div>
+      <div className="mb-3 sm:mb-4">
+        <h3 className="font-semibold text-gray-900 text-sm sm:text-base">
+          {author.name}
+        </h3>
+        <p className="text-xs sm:text-sm text-gray-500">
+          {author.handle}
+        </p>
       </div>
-      <p className="text-gray-600 leading-relaxed">
+      <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
         "{text}"
       </p>
     </Card>

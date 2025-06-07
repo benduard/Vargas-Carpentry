@@ -1,48 +1,18 @@
-import { cn } from "../../lib/utils"
+import React from 'react';
+import { TestimonialType } from '../../data/testimonials';
 
-export interface TestimonialAuthor {
-  name: string
-  handle: string
-  avatar: string
+interface TestimonialCardProps {
+  testimonial: TestimonialType;
 }
 
-export interface TestimonialCardProps {
-  author: TestimonialAuthor
-  text: string
-  href?: string
-  className?: string
-}
-
-export function TestimonialCard({ 
-  author,
-  text,
-  href,
-  className
-}: TestimonialCardProps) {
-  const Card = href ? 'a' : 'div'
-  
+export const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial }) => {
   return (
-    <Card
-      {...(href ? { href } : {})}
-      className={cn(
-        "flex flex-col bg-white rounded-lg shadow-lg",
-        "p-4 sm:p-6 border border-gray-100",
-        "hover:shadow-xl transition-shadow duration-300",
-        "touch-manipulation",
-        className
-      )}
-    >
-      <div className="mb-3 sm:mb-4">
-        <h3 className="font-semibold text-gray-900 text-sm sm:text-base">
-          {author.name}
-        </h3>
-        <p className="text-xs sm:text-sm text-gray-500">
-          {author.handle}
-        </p>
+    <div className="bg-white p-6 rounded-lg shadow-md h-full flex flex-col">
+      <p className="text-gray-600 mb-4 flex-grow">{testimonial.text}</p>
+      <div>
+        <p className="font-semibold text-gray-900">{testimonial.author}</p>
+        <p className="text-gray-500 text-sm">{testimonial.location}</p>
       </div>
-      <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-        "{text}"
-      </p>
-    </Card>
-  )
-} 
+    </div>
+  );
+}; 

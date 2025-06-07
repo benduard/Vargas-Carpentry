@@ -31,157 +31,157 @@ const Gallery: React.FC = () => {
         {/* Gallery Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           <img 
-            src="/images/Chandalier1.jpeg" 
-            alt="Chandelier Installation 1" 
+            src="/images/chandelier-installation-houston.jpg" 
+            alt="Custom chandelier installation in Houston home - Vargas Carpentry" 
             className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
-            onClick={() => openLightbox('/images/Chandalier1.jpeg')} 
+            onClick={() => openLightbox('/images/chandelier-installation-houston.jpg')} 
             loading="lazy"
           />
           <img 
-            src="/images/Chandalier3.jpeg" 
-            alt="Chandelier Installation 2" 
+            src="/images/modern-chandelier-mounting-houston.jpg" 
+            alt="Modern chandelier mounting service - Houston lighting install" 
             className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
-            onClick={() => openLightbox('/images/Chandalier3.jpeg')} 
+            onClick={() => openLightbox('/images/modern-chandelier-mounting-houston.jpg')} 
             loading="lazy"
           />
           <img 
-            src="/images/Chandalier4.jpeg" 
-            alt="Chandelier Installation 3" 
+            src="/images/elegant-chandelier-vargas-carpentry-houston.jpg" 
+            alt="Elegant chandelier installation by Vargas Carpentry in Houston" 
             className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
-            onClick={() => openLightbox('/images/Chandalier4.jpeg')} 
+            onClick={() => openLightbox('/images/elegant-chandelier-vargas-carpentry-houston.jpg')} 
             loading="lazy"
           />
           <img 
-            src="/images/Cover1.jpg" 
-            alt="Cover 1" 
+            src="/images/tv-wall-mounting-houston.jpg" 
+            alt="TV wall mounting service - Houston home entertainment install" 
             className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
-            onClick={() => openLightbox('/images/Cover1.jpg')} 
+            onClick={() => openLightbox('/images/tv-wall-mounting-houston.jpg')} 
             loading="lazy"
           />
           <img 
-            src="/images/Cover2.1.jpg" 
-            alt="Cover 2" 
+            src="/images/trim-molding-carpentry-houston.jpg" 
+            alt="Custom trim and molding work - Houston carpentry" 
             className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
-            onClick={() => openLightbox('/images/Cover2.1.jpg')} 
+            onClick={() => openLightbox('/images/trim-molding-carpentry-houston.jpg')} 
             loading="lazy"
           />
           <img 
-            src="/images/Cover3.jpg" 
-            alt="Cover 3" 
+            src="/images/drywall-repair-painting-houston.jpg" 
+            alt="Drywall repair and painting - Houston handyman service" 
             className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
-            onClick={() => openLightbox('/images/Cover3.jpg')} 
+            onClick={() => openLightbox('/images/drywall-repair-painting-houston.jpg')} 
             loading="lazy"
           />
           <img 
-            src="/images/Cover4.jpg" 
-            alt="Cover 4" 
+            src="/images/cabinet-installation-storage-houston.jpg" 
+            alt="Cabinet installation and custom storage - Houston carpentry" 
             className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
-            onClick={() => openLightbox('/images/Cover4.jpg')} 
+            onClick={() => openLightbox('/images/cabinet-installation-storage-houston.jpg')} 
             loading="lazy"
           />
           <img 
-            src="/images/Cover5.jpg" 
-            alt="Cover 5" 
+            src="/images/woodworking-shelving-home-improvement-houston.jpg" 
+            alt="Custom woodworking and shelving - Houston home improvement" 
             className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
-            onClick={() => openLightbox('/images/Cover5.jpg')} 
+            onClick={() => openLightbox('/images/woodworking-shelving-home-improvement-houston.jpg')} 
             loading="lazy"
           />
           <img 
-            src="/images/Cover6.jpg" 
-            alt="Cover 6" 
+            src="/images/framing-carpentry-residential-houston.jpg" 
+            alt="Framing and carpentry project - Houston residential service" 
             className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
-            onClick={() => openLightbox('/images/Cover6.jpg')} 
+            onClick={() => openLightbox('/images/framing-carpentry-residential-houston.jpg')} 
             loading="lazy"
           />
           {showAll && (
             <>
               <img 
-                src="/images/Cover7.jpg" 
-                alt="Cover 7" 
+                src="/images/pressure-washing-exterior-cleaning-houston.jpg" 
+                alt="Pressure washing service - Houston exterior cleaning" 
                 className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
-                onClick={() => openLightbox('/images/Cover7.jpg')} 
+                onClick={() => openLightbox('/images/pressure-washing-exterior-cleaning-houston.jpg')} 
                 loading="lazy"
               />
               <img 
-                src="/images/Cover8.jpg" 
-                alt="Cover 8" 
+                src="/images/gutter-cleaning-home-maintenance-houston.jpg" 
+                alt="Gutter cleaning service - Houston home maintenance" 
                 className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
-                onClick={() => openLightbox('/images/Cover8.jpg')} 
+                onClick={() => openLightbox('/images/gutter-cleaning-home-maintenance-houston.jpg')} 
                 loading="lazy"
               />
               <img 
-                src="/images/Cover9.jpg" 
-                alt="Cover 9" 
+                src="/images/window-cleaning-residential-commercial-houston.jpg" 
+                alt="Window cleaning service - Houston residential and commercial" 
                 className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
-                onClick={() => openLightbox('/images/Cover9.jpg')} 
+                onClick={() => openLightbox('/images/window-cleaning-residential-commercial-houston.jpg')} 
                 loading="lazy"
               />
               <img 
-                src="/images/Cover10.jpg" 
-                alt="Cover 10" 
+                src="/images/deck-outdoor-carpentry-backyard-houston.jpg" 
+                alt="Deck and outdoor carpentry project - Houston backyard improvement" 
                 className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
-                onClick={() => openLightbox('/images/Cover10.jpg')} 
+                onClick={() => openLightbox('/images/deck-outdoor-carpentry-backyard-houston.jpg')} 
                 loading="lazy"
               />
               <img 
-                src="/images/Cover11.jpg" 
-                alt="Cover 11" 
+                src="/images/store-display-counter-commercial-carpentry-houston.jpg" 
+                alt="Store display and counter installation - Houston commercial carpentry" 
                 className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
-                onClick={() => openLightbox('/images/Cover11.jpg')} 
+                onClick={() => openLightbox('/images/store-display-counter-commercial-carpentry-houston.jpg')} 
                 loading="lazy"
               />
               <img 
-                src="/images/Cover12.jpg" 
-                alt="Cover 12" 
+                src="/images/general-repairs-remodeling-handyman-houston.jpg" 
+                alt="General repairs and remodeling - Houston handyman" 
                 className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
-                onClick={() => openLightbox('/images/Cover12.jpg')} 
+                onClick={() => openLightbox('/images/general-repairs-remodeling-handyman-houston.jpg')} 
                 loading="lazy"
               />
               <img 
-                src="/images/Cover13.jpg" 
-                alt="Cover 13" 
+                src="/images/kitchen-island-cabinetry-carpentry-houston.jpg" 
+                alt="Custom kitchen island and cabinetry - Houston carpentry" 
                 className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
-                onClick={() => openLightbox('/images/Cover13.jpg')} 
+                onClick={() => openLightbox('/images/kitchen-island-cabinetry-carpentry-houston.jpg')} 
                 loading="lazy"
               />
               <img 
-                src="/images/Cover14.jpg" 
-                alt="Cover 14" 
+                src="/images/bathroom-remodel-tile-home-improvement-houston.jpg" 
+                alt="Bathroom remodel and tile work - Houston home improvement" 
                 className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
-                onClick={() => openLightbox('/images/Cover14.jpg')} 
+                onClick={() => openLightbox('/images/bathroom-remodel-tile-home-improvement-houston.jpg')} 
                 loading="lazy"
               />
               <img 
-                src="/images/Cover15.jpg" 
-                alt="Cover 15" 
+                src="/images/office-renovation-drywall-commercial-houston.jpg" 
+                alt="Office renovation and drywall repair - Houston commercial service" 
                 className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
-                onClick={() => openLightbox('/images/Cover15.jpg')} 
+                onClick={() => openLightbox('/images/office-renovation-drywall-commercial-houston.jpg')} 
                 loading="lazy"
               />
               <img 
-                src="/images/Cover17.jpg" 
-                alt="Cover 17" 
+                src="/images/trim-molding-residential-carpentry-houston.jpg" 
+                alt="Custom trim and molding - Houston residential carpentry" 
                 className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
-                onClick={() => openLightbox('/images/Cover17.jpg')} 
+                onClick={() => openLightbox('/images/trim-molding-residential-carpentry-houston.jpg')} 
                 loading="lazy"
               />
               <img 
-                src="/images/Cover18.jpg" 
-                alt="Cover 18" 
+                src="/images/handyman-services-home-repairs-houston.jpg" 
+                alt="Expert handyman services - Houston home repairs" 
                 className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
-                onClick={() => openLightbox('/images/Cover18.jpg')} 
+                onClick={() => openLightbox('/images/handyman-services-home-repairs-houston.jpg')} 
                 loading="lazy"
               />
               <img 
-                src="/images/Cover19.jpg" 
-                alt="Cover 19" 
+                src="/images/carpentry-handyman-project-vargas-carpentry-houston.jpg" 
+                alt="Houston carpentry and handyman project - Vargas Carpentry" 
                 className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
-                onClick={() => openLightbox('/images/Cover19.jpg')} 
+                onClick={() => openLightbox('/images/carpentry-handyman-project-vargas-carpentry-houston.jpg')} 
                 loading="lazy"
               />
             </>
           )}
-        </div>
+                </div>
         
         <div className="text-center mt-8">
           <button onClick={toggleShowAll} className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition-colors">

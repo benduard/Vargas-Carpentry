@@ -36,5 +36,11 @@ export const services: ServiceType[] = [
     title: 'Framing & Carpentry',
     description: 'Structural framing, finish carpentry, and custom woodwork solutions.',
     icon: 'square'
+  },
+  {
+    id: '7',
+    title: 'Exterior Cleaning Services',
+    description: 'Professional pressure washing, gutter cleaning, and window cleaning services.',
+    icon: 'droplets'
   }
 ];

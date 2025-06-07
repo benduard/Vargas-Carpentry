@@ -1,18 +1,20 @@
 import React, { useState } from 'react';
 import { services } from '../data/services';
 import { Mail, Phone, MapPin } from 'lucide-react';
+import { supabase } from '../lib/supabase';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
+    full_name: '',
     email: '',
+    phone_number: '',
     service: '',
     message: ''
   });
   
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -22,17 +24,31 @@ const Contact: React.FC = () => {
     }));
   };
   
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError(null);
     
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      const { error: submitError } = await supabase
+        .from('Vargas-Carpentry')
+        .insert([
+          {
+            full_name: formData.full_name,
+            email: formData.email,
+            phone_number: formData.phone_number,
+            service: formData.service,
+            message: formData.message,
+            created_at: new Date().toISOString()
+          }
+        ]);
+
+      if (submitError) throw submitError;
+
       setIsSubmitted(true);
       setFormData({
-        name: '',
-        phone: '',
+        full_name: '',
+        phone_number: '',
         email: '',
         service: '',
         message: ''
@@ -42,7 +58,12 @@ const Contact: React.FC = () => {
       setTimeout(() => {
         setIsSubmitted(false);
       }, 5000);
-    }, 1500);
+    } catch (err) {
+      setError('Failed to submit form. Please try again.');
+      console.error('Error submitting form:', err);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
   
   return (
@@ -62,28 +83,34 @@ const Contact: React.FC = () => {
                 <p>We'll get back to you shortly.</p>
               </div>
             ) : null}
+
+            {error && (
+              <div className="bg-red-600 text-white p-4 rounded-md mb-6">
+                <p className="font-medium">{error}</p>
+              </div>
+            )}
             
             <form onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-1">Full Name *</label>
+                  <label htmlFor="full_name" className="block text-sm font-medium mb-1">Full Name *</label>
                   <input
                     type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
+                    id="full_name"
+                    name="full_name"
+                    value={formData.full_name}
                     onChange={handleChange}
                     className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 text-white"
                     required
                   />
                 </div>
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium mb-1">Phone Number *</label>
+                  <label htmlFor="phone_number" className="block text-sm font-medium mb-1">Phone Number *</label>
                   <input
                     type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
+                    id="phone_number"
+                    name="phone_number"
+                    value={formData.phone_number}
                     onChange={handleChange}
                     className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 text-white"
                     required

@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -34,13 +34,14 @@ module.exports = {
         container: "1280px",
       },
       animation: {
-        marquee: 'marquee 15s linear infinite',
+        'marquee-mobile': 'marquee 0.8s linear infinite',
+        'marquee-desktop': 'marquee 25s linear infinite',
       },
       keyframes: {
         marquee: {
-          '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-50%)' }
-        }
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
       }
     },
   },

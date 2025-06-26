@@ -3,8 +3,8 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "Professional carpentry and handyman services website for Vargas Carpentry in Houston, TX",
-  "keywords": ["carpentry", "handyman", "houston", "construction", "home-improvement"],
+  "description": "Professional carpentry and handyman services website for Vargas Carpentry in Houston, TX - Ready for automatic Netlify deployment",
+  "keywords": ["carpentry", "handyman", "houston", "construction", "home-improvement", "netlify-ready"],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -39,5 +39,10 @@
   },
   "engines": {
     "node": ">=18.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/vargas-carpentry-website"
+  },
+  "homepage": "https://vargascarpentry.com"
 }

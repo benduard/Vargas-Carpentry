@@ -31,13 +31,13 @@ const Navbar: React.FC = () => {
       }`}
     >
       <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center min-h-[80px]">
+        <div className="flex justify-between items-center min-h-[90px]">
           {/* Logo */}
           <div className="flex items-center flex-shrink-0">
             <img 
               src="/favicon/Logo2.png" 
               alt="Vargas Handyman Logo" 
-              className="h-16 sm:h-18 md:h-20 lg:h-24 rounded-full bg-transparent object-cover" 
+              className="h-20 sm:h-24 md:h-28 lg:h-32 xl:h-36 rounded-full bg-transparent object-cover" 
             />
           </div>
           

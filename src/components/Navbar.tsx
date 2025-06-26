@@ -27,35 +27,32 @@ const Navbar: React.FC = () => {
   return (
     <header 
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-2'
+        isScrolled ? 'bg-white shadow-md py-0' : 'bg-transparent py-0'
       }`}
     >
       <div className="container mx-auto px-4">
         {/* Mobile Layout */}
-        <div className="md:hidden">
-          {/* Top row with centered logo */}
-          <div className="flex justify-center items-center py-2">
+        <div className="md:hidden flex justify-between items-center">
+          {/* Logo positioned flush left */}
+          <div className="flex items-center">
             <img 
               src="/favicon/Logo2.png" 
               alt="Vargas Handyman Logo" 
-              className="h-20 sm:h-24 rounded-full bg-transparent object-cover" 
+              className="h-16 sm:h-20 rounded-full bg-transparent object-cover" 
             />
           </div>
           
-          {/* Bottom row with phone and menu */}
-          <div className="flex justify-between items-center pb-2">
-            <div></div> {/* Empty div for spacing */}
-            <div className="flex items-center space-x-3">
-              <a href="tel:+8323711183" className={`flex items-center ${isScrolled ? 'text-red-600' : 'text-white'} hover:text-red-500 transition-colors`}>
-                <Phone size={20} />
-              </a>
-              <button 
-                onClick={toggleMenu} 
-                className={`${isScrolled ? 'text-gray-900' : 'text-white'} hover:text-red-600 transition-colors`}
-              >
-                {isOpen ? <X size={24} /> : <Menu size={24} />}
-              </button>
-            </div>
+          {/* Phone and menu buttons on the right */}
+          <div className="flex items-center space-x-3">
+            <a href="tel:+8323711183" className={`flex items-center ${isScrolled ? 'text-red-600' : 'text-white'} hover:text-red-500 transition-colors`}>
+              <Phone size={20} />
+            </a>
+            <button 
+              onClick={toggleMenu} 
+              className={`${isScrolled ? 'text-gray-900' : 'text-white'} hover:text-red-600 transition-colors`}
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
           </div>
         </div>
 

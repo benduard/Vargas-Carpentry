@@ -2,9 +2,34 @@
 
 A professional website for Vargas Carpentry & Handyman Services in Houston, Texas. Built with React, TypeScript, Tailwind CSS, and Supabase.
 
-## 🚀 Live Site
+## 🚀 Quick Deploy to Netlify
 
-Visit the live website: [https://luminous-kleicha-1cdc27.netlify.app](https://luminous-kleicha-1cdc27.netlify.app)
+### Method 1: Direct GitHub Integration (Recommended)
+
+1. **Push to GitHub**: Make sure all your code is pushed to your GitHub repository
+2. **Connect to Netlify**:
+   - Go to [netlify.com](https://netlify.com) and sign in
+   - Click "New site from Git"
+   - Choose GitHub and select your repository
+   - Netlify will auto-detect the settings from `netlify.toml`
+
+3. **Add Environment Variables** in Netlify Dashboard:
+   ```
+   VITE_SUPABASE_URL = https://gfdkfwdnlwapniehgytp.supabase.co
+   VITE_SUPABASE_ANON_KEY = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdmZGtmd2RubHdhcG5pZWhneXRwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDg1MzkyMzksImV4cCI6MjA2NDExNTIzOX0.CFMuHlCPB_duFJxJBGRFXQ1uQKVujs5t-MIDBRxkuXE
+   ```
+
+### Method 2: Manual Deploy
+
+If GitHub integration isn't working:
+
+1. **Build locally**:
+   ```bash
+   npm install
+   npm run build
+   ```
+
+2. **Deploy the `dist` folder** directly to Netlify by dragging it to netlify.com
 
 ## 🛠️ Tech Stack
 
@@ -25,19 +50,18 @@ Visit the live website: [https://luminous-kleicha-1cdc27.netlify.app](https://lu
 - Professional business information
 - SEO optimized with meta tags and structured data
 
-## 🚀 Quick Start
+## 🚀 Local Development
 
 ### Prerequisites
 
 - Node.js 18+ 
 - npm or yarn
-- Supabase account
 
 ### Installation
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/vargas-carpentry.git
+git clone <your-repo-url>
 cd vargas-carpentry
 ```
 
@@ -46,15 +70,15 @@ cd vargas-carpentry
 npm install
 ```
 
-3. Set up environment variables:
+3. Create environment file:
 ```bash
 cp .env.example .env
 ```
 
-4. Update `.env` with your Supabase credentials:
+4. Update `.env` with your Supabase credentials (already configured):
 ```env
-VITE_SUPABASE_URL=your_supabase_project_url
-VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+VITE_SUPABASE_URL=https://gfdkfwdnlwapniehgytp.supabase.co
+VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdmZGtmd2RubHdhcG5pZWhneXRwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDg1MzkyMzksImV4cCI6MjA2NDExNTIzOX0.CFMuHlCPB_duFJxJBGRFXQ1uQKVujs5t-MIDBRxkuXE
 ```
 
 5. Start the development server:
@@ -64,15 +88,13 @@ npm run dev
 
 ## 🗄️ Database Setup
 
-### Supabase Configuration
+The Supabase database is already configured and ready to use. The contact form will automatically save submissions to the `Vargas-Carpentry` table.
 
-1. Create a new Supabase project at [supabase.com](https://supabase.com)
-2. Go to Settings > API to get your project URL and anon key
-3. Create the contact form table by running this SQL in the Supabase SQL editor:
+### Database Schema
 
 ```sql
--- Create contact form submissions table
-CREATE TABLE IF NOT EXISTS "Vargas-Carpentry" (
+-- Contact form submissions table
+CREATE TABLE "Vargas-Carpentry" (
   id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
   full_name text NOT NULL,
   email text NOT NULL,
@@ -81,59 +103,28 @@ CREATE TABLE IF NOT EXISTS "Vargas-Carpentry" (
   message text,
   created_at timestamptz DEFAULT now()
 );
-
--- Enable Row Level Security
-ALTER TABLE "Vargas-Carpentry" ENABLE ROW LEVEL SECURITY;
-
--- Create policy to allow inserts (for contact form submissions)
-CREATE POLICY "Allow contact form submissions"
-  ON "Vargas-Carpentry"
-  FOR INSERT
-  TO anon
-  WITH CHECK (true);
-
--- Create policy for authenticated users to read submissions
-CREATE POLICY "Allow authenticated users to read submissions"
-  ON "Vargas-Carpentry"
-  FOR SELECT
-  TO authenticated
-  USING (true);
 ```
 
-## 🚀 Deployment
+## 🚨 Common Deployment Issues & Solutions
 
-### Netlify Deployment
-
-This project is configured for automatic deployment on Netlify.
-
-#### Option 1: Deploy from GitHub (Recommended)
-
-1. Push your code to GitHub
-2. Connect your GitHub repository to Netlify
-3. Set the following build settings:
-   - **Build command**: `npm run build`
-   - **Publish directory**: `dist`
-   - **Node version**: `18`
-
-4. Add environment variables in Netlify dashboard:
-   - `VITE_SUPABASE_URL`: Your Supabase project URL
-   - `VITE_SUPABASE_ANON_KEY`: Your Supabase anon key
-
-#### Option 2: Manual Deploy
-
+### Issue 1: Build Fails
+**Solution**: Make sure you have Node.js 18+ and all dependencies are installed:
 ```bash
+rm -rf node_modules package-lock.json
+npm install
 npm run build
-# Upload the 'dist' folder to Netlify
 ```
 
-### Environment Variables for Production
+### Issue 2: Environment Variables Not Working
+**Solution**: In Netlify dashboard, go to Site Settings > Environment Variables and add:
+- `VITE_SUPABASE_URL`
+- `VITE_SUPABASE_ANON_KEY`
 
-Make sure to set these environment variables in your Netlify dashboard:
+### Issue 3: 404 Errors on Page Refresh
+**Solution**: The `netlify.toml` file includes redirects to handle this automatically.
 
-```
-VITE_SUPABASE_URL=https://your-project.supabase.co
-VITE_SUPABASE_ANON_KEY=your-anon-key-here
-```
+### Issue 4: Images Not Loading
+**Solution**: Make sure all images in the `public/` folder are committed to your repository.
 
 ## 📁 Project Structure
 
@@ -154,22 +145,6 @@ src/
 └── App.tsx             # Main app component
 ```
 
-## 🎨 Customization
-
-### Colors
-The primary color scheme uses red (#D32F2F) and can be customized in `tailwind.config.js`.
-
-### Content
-- Update business information in the components
-- Replace images in the `public/` directory
-- Modify services in `src/data/services.ts`
-- Update testimonials in `src/data/testimonials.ts`
-
-### SEO
-- Update meta tags in `index.html`
-- Modify structured data for local business
-- Update sitemap and robots.txt as needed
-
 ## 📞 Contact Information
 
 - **Phone**: (832) 371-1183
@@ -179,7 +154,3 @@ The primary color scheme uses red (#D32F2F) and can be customized in `tailwind.c
 ## 📄 License
 
 This project is proprietary and confidential. All rights reserved.
-
-## 🤝 Support
-
-For technical support or questions about the website, please contact the development team.

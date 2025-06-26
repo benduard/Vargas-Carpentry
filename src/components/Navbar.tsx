@@ -31,13 +31,42 @@ const Navbar: React.FC = () => {
       }`}
     >
       <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center min-h-[90px]">
+        {/* Mobile Layout */}
+        <div className="md:hidden">
+          {/* Top row with centered logo */}
+          <div className="flex justify-center items-center py-2">
+            <img 
+              src="/favicon/Logo2.png" 
+              alt="Vargas Handyman Logo" 
+              className="h-20 sm:h-24 rounded-full bg-transparent object-cover" 
+            />
+          </div>
+          
+          {/* Bottom row with phone and menu */}
+          <div className="flex justify-between items-center pb-2">
+            <div></div> {/* Empty div for spacing */}
+            <div className="flex items-center space-x-3">
+              <a href="tel:+8323711183" className={`flex items-center ${isScrolled ? 'text-red-600' : 'text-white'} hover:text-red-500 transition-colors`}>
+                <Phone size={20} />
+              </a>
+              <button 
+                onClick={toggleMenu} 
+                className={`${isScrolled ? 'text-gray-900' : 'text-white'} hover:text-red-600 transition-colors`}
+              >
+                {isOpen ? <X size={24} /> : <Menu size={24} />}
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Tablet and Desktop Layout */}
+        <div className="hidden md:flex justify-between items-center min-h-[90px]">
           {/* Logo */}
           <div className="flex items-center flex-shrink-0">
             <img 
               src="/favicon/Logo2.png" 
               alt="Vargas Handyman Logo" 
-              className="h-20 sm:h-24 md:h-28 lg:h-32 xl:h-36 rounded-full bg-transparent object-cover" 
+              className="h-28 lg:h-32 xl:h-36 rounded-full bg-transparent object-cover" 
             />
           </div>
           
@@ -58,7 +87,7 @@ const Navbar: React.FC = () => {
           </div>
 
           {/* Tablet Navigation (md to lg) */}
-          <div className="hidden md:flex lg:hidden items-center space-x-4">
+          <div className="flex lg:hidden items-center space-x-4">
             <nav className="flex items-center space-x-3">
               <a href="#" className={`${isScrolled ? 'text-gray-800' : 'text-white'} hover:text-red-600 transition-colors font-medium text-base whitespace-nowrap`}>Home</a>
               <a href="#services" className={`${isScrolled ? 'text-gray-800' : 'text-white'} hover:text-red-600 transition-colors font-medium text-base whitespace-nowrap`}>Services</a>
@@ -71,19 +100,6 @@ const Navbar: React.FC = () => {
               <Phone size={16} className="mr-1" />
               <span className="text-sm">(832) 371-1183</span>
             </a>
-          </div>
-          
-          {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center space-x-3">
-            <a href="tel:+8323711183" className={`flex items-center ${isScrolled ? 'text-red-600' : 'text-white'} hover:text-red-500 transition-colors`}>
-              <Phone size={20} />
-            </a>
-            <button 
-              onClick={toggleMenu} 
-              className={`${isScrolled ? 'text-gray-900' : 'text-white'} hover:text-red-600 transition-colors`}
-            >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
           </div>
         </div>
       </div>

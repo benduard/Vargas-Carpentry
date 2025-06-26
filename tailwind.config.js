@@ -34,7 +34,7 @@ export default {
         container: "1280px",
       },
       animation: {
-        'marquee-mobile': 'marquee 0.8s linear infinite',
+        'marquee-mobile': 'marquee 40s linear infinite',
         'marquee-desktop': 'marquee 25s linear infinite',
       },
       keyframes: {

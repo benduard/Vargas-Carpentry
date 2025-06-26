@@ -57,13 +57,13 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Tablet and Desktop Layout */}
-        <div className="hidden md:flex justify-between items-center min-h-[80px] lg:min-h-[90px] xl:min-h-[100px]">
-          {/* Logo - Made smaller on desktop */}
+        <div className="hidden md:flex justify-between items-center min-h-[90px] lg:min-h-[110px] xl:min-h-[130px]">
+          {/* Logo - Made bigger on desktop */}
           <div className="flex items-center flex-shrink-0">
             <img 
               src="/favicon/Logo2.png" 
               alt="Vargas Handyman Logo" 
-              className="h-20 lg:h-22 xl:h-24 rounded-full bg-transparent object-cover" 
+              className="h-24 lg:h-28 xl:h-32 rounded-full bg-transparent object-cover" 
             />
           </div>
           

@@ -44,7 +44,6 @@ const Gallery: React.FC = () => {
 
   // Show first 6 images by default, or all if showAll is true
   const displayedImages = showAll ? allImages : allImages.slice(0, 6);
-  const remainingCount = allImages.length - 6;
 
   return (
     <section id="gallery" className="py-20 bg-gray-50">
@@ -84,7 +83,7 @@ const Gallery: React.FC = () => {
                 </>
               ) : (
                 <>
-                  Show More ({remainingCount} more photos)
+                  Show More
                   <ChevronDown size={20} className="ml-2" />
                 </>
               )}

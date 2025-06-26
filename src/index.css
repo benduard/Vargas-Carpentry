@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Critical CSS for hero section to prevent layout shift */
+@layer base {
+  /* Ensure hero section renders immediately */
+  .hero-section {
+    min-height: 600px;
+    height: 100vh;
+    background-color: #1f2937; /* Fallback color while image loads */
+  }
+  
+  /* Optimize font loading */
+  body {
+    font-display: swap;
+  }
+}
+
+/* Preload critical hero background */
+@layer utilities {
+  .hero-bg-preload {
+    background-image: url('/Hero Cover/Hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}

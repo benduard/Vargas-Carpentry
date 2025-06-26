@@ -4,11 +4,20 @@ import { ArrowRight } from 'lucide-react';
 const Hero: React.FC = () => {
   return (
     <section className="relative h-screen min-h-[600px] flex items-center">
-      {/* Background Image with Overlay */}
+      {/* Preload hint for the hero image */}
+      <link 
+        rel="preload" 
+        as="image" 
+        href="/Hero Cover/Hero.jpg"
+        fetchPriority="high"
+      />
+      
+      {/* Background Image with Overlay - Optimized loading */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: 'url("/Hero Cover/Hero.jpg")',
+          willChange: 'transform', // Optimize for animations
         }}
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>

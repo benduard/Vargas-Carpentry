@@ -1,8 +1,10 @@
 {
-  "name": "vite-react-typescript-starter",
+  "name": "vargas-carpentry-website",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "description": "Professional carpentry and handyman services website for Vargas Carpentry in Houston, TX",
+  "keywords": ["carpentry", "handyman", "houston", "construction", "home-improvement"],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -34,5 +36,8 @@
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.3.0",
     "vite": "^5.4.19"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }

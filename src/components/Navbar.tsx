@@ -57,29 +57,29 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Tablet and Desktop Layout */}
-        <div className="hidden md:flex justify-between items-center min-h-[90px]">
+        <div className="hidden md:flex justify-between items-center min-h-[100px] lg:min-h-[120px] xl:min-h-[140px]">
           {/* Logo */}
           <div className="flex items-center flex-shrink-0">
             <img 
               src="/favicon/Logo2.png" 
               alt="Vargas Handyman Logo" 
-              className="h-28 lg:h-32 xl:h-36 rounded-full bg-transparent object-cover" 
+              className="h-32 lg:h-40 xl:h-48 2xl:h-52 rounded-full bg-transparent object-cover" 
             />
           </div>
           
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
             <nav className="flex items-center space-x-4 xl:space-x-6">
-              <a href="#" className={`${isScrolled ? 'text-gray-800' : 'text-white'} hover:text-red-600 transition-colors font-medium text-lg whitespace-nowrap`}>Home</a>
-              <a href="#services" className={`${isScrolled ? 'text-gray-800' : 'text-white'} hover:text-red-600 transition-colors font-medium text-lg whitespace-nowrap`}>Services</a>
-              <a href="#about" className={`${isScrolled ? 'text-gray-800' : 'text-white'} hover:text-red-600 transition-colors font-medium text-lg whitespace-nowrap`}>About</a>
-              <a href="#gallery" className={`${isScrolled ? 'text-gray-800' : 'text-white'} hover:text-red-600 transition-colors font-medium text-lg whitespace-nowrap`}>Gallery</a>
-              <a href="#contact" className={`${isScrolled ? 'text-gray-800' : 'text-white'} hover:text-red-600 transition-colors font-medium text-lg whitespace-nowrap`}>Contact</a>
+              <a href="#" className={`${isScrolled ? 'text-gray-800' : 'text-white'} hover:text-red-600 transition-colors font-medium text-lg xl:text-xl whitespace-nowrap`}>Home</a>
+              <a href="#services" className={`${isScrolled ? 'text-gray-800' : 'text-white'} hover:text-red-600 transition-colors font-medium text-lg xl:text-xl whitespace-nowrap`}>Services</a>
+              <a href="#about" className={`${isScrolled ? 'text-gray-800' : 'text-white'} hover:text-red-600 transition-colors font-medium text-lg xl:text-xl whitespace-nowrap`}>About</a>
+              <a href="#gallery" className={`${isScrolled ? 'text-gray-800' : 'text-white'} hover:text-red-600 transition-colors font-medium text-lg xl:text-xl whitespace-nowrap`}>Gallery</a>
+              <a href="#contact" className={`${isScrolled ? 'text-gray-800' : 'text-white'} hover:text-red-600 transition-colors font-medium text-lg xl:text-xl whitespace-nowrap`}>Contact</a>
             </nav>
             
             <a href="tel:+8323711183" className="flex items-center bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition-colors whitespace-nowrap ml-4">
               <Phone size={18} className="mr-2" />
-              <span className="text-sm lg:text-base">(832) 371-1183</span>
+              <span className="text-sm lg:text-base xl:text-lg">(832) 371-1183</span>
             </a>
           </div>
 

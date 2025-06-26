@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { X } from 'lucide-react';
+import { X, ChevronDown, ChevronUp } from 'lucide-react';
 
 const Gallery: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [showAll, setShowAll] = useState(false);
 
   const openLightbox = (imageUrl: string) => {
     setSelectedImage(imageUrl);
@@ -10,6 +11,10 @@ const Gallery: React.FC = () => {
 
   const closeLightbox = () => {
     setSelectedImage(null);
+  };
+
+  const toggleShowAll = () => {
+    setShowAll(!showAll);
   };
 
   // All images from public/Vargas Assets folder
@@ -37,6 +42,10 @@ const Gallery: React.FC = () => {
     { src: "/Vargas Assets/Cover19.jpg", alt: "Cover 19 - Vargas Carpentry project" }
   ];
 
+  // Show first 6 images by default, or all if showAll is true
+  const displayedImages = showAll ? allImages : allImages.slice(0, 6);
+  const remainingCount = allImages.length - 6;
+
   return (
     <section id="gallery" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -46,9 +55,10 @@ const Gallery: React.FC = () => {
             Browse through our portfolio of completed projects and see the quality of our craftsmanship.
           </p>
         </div>
+        
         {/* Gallery Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-          {allImages.map((image, index) => (
+          {displayedImages.map((image, index) => (
             <img
               key={index}
               src={image.src}
@@ -59,6 +69,29 @@ const Gallery: React.FC = () => {
             />
           ))}
         </div>
+
+        {/* Show More/Less Button */}
+        {allImages.length > 6 && (
+          <div className="text-center mt-8">
+            <button
+              onClick={toggleShowAll}
+              className="inline-flex items-center bg-red-600 hover:bg-red-700 text-white font-medium px-6 py-3 rounded-md transition-colors"
+            >
+              {showAll ? (
+                <>
+                  Show Less
+                  <ChevronUp size={20} className="ml-2" />
+                </>
+              ) : (
+                <>
+                  Show More ({remainingCount} more photos)
+                  <ChevronDown size={20} className="ml-2" />
+                </>
+              )}
+            </button>
+          </div>
+        )}
+        
         {/* Lightbox */}
         {selectedImage && (
           <div

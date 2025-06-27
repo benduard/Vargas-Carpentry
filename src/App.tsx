@@ -13,7 +13,7 @@ import FloatingCTA from './components/FloatingCTA';
 function App() {
   // Set page title
   useEffect(() => {
-    document.title = 'Vargas Handyman & Custom Carpentry';
+    document.title = 'Vargas Carpentry & Handyman Services';
   }, []);
 
   return (

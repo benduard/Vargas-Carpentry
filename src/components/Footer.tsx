@@ -8,8 +8,8 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Information */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Carpentry & Handyman Services</h3>
-            <p className="mb-4 text-sm md:text-base">Professional handyman and carpentry services you can trust, committed to quality workmanship.</p>
+            <h3 className="text-xl font-bold mb-4">Vargas Carpentry & Handyman Services</h3>
+            <p className="mb-4 text-sm md:text-base">Professional carpentry and handyman services you can trust, committed to quality workmanship.</p>
             <div className="flex space-x-4 mt-4">
               <a href="#" className="text-white hover:text-red-500 transition-colors">
                 <Facebook size={20} />
@@ -68,7 +68,7 @@ const Footer: React.FC = () => {
         </div>
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-sm text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Vargas Handyman & Custom Carpentry. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Vargas Carpentry & Handyman Services. All rights reserved.</p>
         </div>
       </div>
     </footer>

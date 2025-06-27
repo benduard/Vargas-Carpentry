@@ -23,9 +23,9 @@ const About: React.FC = () => {
           
           {/* Content Column */}
           <div className="order-1 md:order-2">
-            <h2 className="text-3xl font-bold text-center mb-4">Why Choose Vargas Handyman?</h2>
+            <h2 className="text-3xl font-bold text-center mb-4">Why Choose Vargas Carpentry?</h2>
             <p className="text-gray-600 text-center mb-8">
-              At Vargas Handyman & Custom Carpentry, we bring over 26 years of experience to every project. From basic repairs to full remodels, we take pride in doing clean, reliable work — always at affordable prices.
+              At Vargas Carpentry & Handyman Services, we bring over 26 years of experience to every project. From basic repairs to full remodels, we take pride in doing clean, reliable work — always at affordable prices.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="bg-white p-6 rounded-lg shadow-md">
